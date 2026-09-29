@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — HWC</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<header>
+  <a class="brand" href="/"><span class="dot"></span>HWC</a>
+  <nav>
+    <a href="/about">About</a>
+    <a href="/privacy" class="active">Privacy</a>
+    <a href="/terms">Terms</a>
+    <a href="/contact">Contact</a>
+  </nav>
+</header>
+<main>
+  <h1>Privacy Policy</h1>
+  <p class="muted">Last updated: September 2026</p>
+
+  <div class="card">
+    <p>This policy describes what HWC (the app) actually collects and how it's handled,
+    described plainly and matched to how the app is really built — not a generic
+    template. If something below changes, this page will be updated.</p>
+
+    <h2>What we collect</h2>
+    <ul>
+      <li><strong>Account info:</strong> the email address you sign up with.</li>
+      <li><strong>Health data you choose to log:</strong> sleep, activity, water,
+      weight, and nutrition entries you enter yourself, plus any photo you choose to
+      submit to the Food Scanner or Health Report Reader features.</li>
+      <li><strong>AI chat content:</strong> messages you send to the AI assistant, and
+      its replies, so your conversation can be shown back to you.</li>
+      <li><strong>Basic device/usage analytics and crash reports</strong> (see below),
+      to help us find and fix problems.</li>
+      <li><strong>Advertising identifiers</strong>, only if you see ads in the app (see
+      "Advertising" below) — collected by our ad provider, not by us directly.</li>
+    </ul>
+
+    <h2>How your data is stored and protected</h2>
+    <p>Your account and health data are stored in a managed Postgres database
+    (Supabase), protected by row-level security policies enforced by the database
+    itself: your account can only read or write rows belonging to your own user ID —
+    this is a real, enforced technical control, not just a policy statement.</p>
+
+    <h2>Who processes your data</h2>
+    <ul>
+      <li><strong>Supabase</strong> — authentication and database hosting.</li>
+      <li><strong>Cloudflare</strong> — runs the server-side AI requests (chat
+      responses, food-photo and document-photo analysis) and app-related network
+      traffic. Your AI chat messages and any photo you submit for analysis are sent to
+      Cloudflare's AI infrastructure to generate a response; they are not stored by us
+      beyond what's needed to show you your own conversation history.</li>
+      <li><strong>Crash/analytics tooling</strong> (Sentry for crash reports, PostHog
+      for basic product analytics) — used to find bugs and understand feature usage.
+      Known-sensitive fields are filtered out of crash reports before they're sent.</li>
+    </ul>
+    <p>We do not sell your personal data.</p>
+
+    <h2>AI features</h2>
+    <p>Messages you send to the AI assistant, and any food or document photo you
+    submit, are processed by an AI model to generate a response for you. These
+    features are built with real, tested safety limits: the assistant is designed to
+    avoid diagnosing conditions or recommending medication changes, and to encourage
+    you to seek professional care when appropriate — but AI-generated text can still be
+    wrong, so use judgment and check anything important with a professional.</p>
+
+    <h2>Advertising</h2>
+    <p>The app may show ads served by Google AdMob on some non-sensitive screens
+    (never on sign-in/sign-up, health-input forms, camera capture, AI chat input, or
+    health-report content). AdMob may collect an advertising identifier and other
+    device signals to select and measure ads, under Google's own privacy practices.
+    HWC Premium subscribers do not see ads.</p>
+
+    <h2>Notifications</h2>
+    <p>If you enable reminders, HWC schedules a local notification on your own
+    device. In-app notifications you receive (e.g. from an administrator) are stored
+    against your account the same way your other data is, protected the same way.</p>
+
+    <h2>Your choices</h2>
+    <ul>
+      <li>You can change your password at any time in Settings.</li>
+      <li>You can turn notification reminders on or off in Settings.</li>
+      <li>You can request deletion of your account and associated data at any time —
+      see <a href="/contact">Contact</a>. We will remove your account and profile;
+      some data may be retained briefly where we're required to for security or legal
+      reasons before final deletion.</li>
+    </ul>
+
+    <h2>Children</h2>
+    <p>HWC is not directed at children and is not knowingly used to collect data from
+    children.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>If this policy changes materially, we'll update the date above.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about this policy or your data:
+    <a class="email" href="mailto:sarayuth939@gmail.com">sarayuth939@gmail.com</a></p>
+  </div>
+</main>
+<footer>© 2026 HWC — AI Health &amp; Wellness Companion.</footer>
+</body>
+</html>
